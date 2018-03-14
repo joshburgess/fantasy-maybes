@@ -1,15 +1,11 @@
 {
-  "name": "fantasy-options",
-  "description": "Option data structure.",
+  "name": "fantasy-maybes",
+  "description": "Maybe data structure.",
   "repository": {
     "type": "git",
     "url": "git://github.com/fantasyland/fantasy-options.git"
   },
-  "keywords": [
-    "fantasyland",
-    "option",
-    "monad"
-  ],
+  "keywords": ["fantasyland", "option", "maybe", "monad"],
   "author": "Brian McKenna",
   "license": "MIT",
   "bugs": {
@@ -21,15 +17,24 @@
     "fantasy-land": "git+https://github.com/fantasyland/fantasy-land.git"
   },
   "devDependencies": {
-    "nodeunit": "0.9.x",
     "fantasy-check": "0.1.4",
     "fantasy-helpers": "0.0.x",
-    "fantasy-identities": "git+https://github.com/fantasyland/fantasy-identities.git"
+    "fantasy-identities":
+      "git+https://github.com/fantasyland/fantasy-identities.git",
+    "nodeunit": "0.9.x",
+    "prettier": "^1.11.1"
   },
   "scripts": {
-      "test": "node --harmony_destructuring node_modules/.bin/nodeunit test/*.js"
+    "test": "node node_modules/.bin/nodeunit test/*.js",
+    "prettier":
+      "prettier --no-semi --single-quote --trailing-comma=all --write 'src/**/*.js'"
   },
-  "files": ["fantasy-options.js", "src/*.js"],
-  "main": "fantasy-options.js",
-  "version": "0.0.2"
+  "files": ["fantasy-maybes.js", "src/*.js"],
+  "main": "fantasy-maybes.js",
+  "version": "0.0.2",
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
 }
